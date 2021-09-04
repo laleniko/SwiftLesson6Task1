@@ -1,17 +1,15 @@
 //
 //  ViewController.swift
-//  HW 2
-//
-//  Created by Alexey Efimov on 12.06.2018.
-//  Copyright © 2018 Alexey Efimov. All rights reserved.
 //
 
 import UIKit
 
-class SettingsController: UIViewController {
+class SettingsViewController: UIViewController {
+    var color: Color!
+    var delegate: SettingViewControllerDelegate!
     
     @IBOutlet weak var colorView: UIView!
-
+    
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
@@ -28,8 +26,8 @@ class SettingsController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         
+        setValue()
         setColor()
-        setValue(for: redLabel, greenLabel, blueLabel)
     }
     
     @IBAction func rgbSlider(_ sender: UISlider) {
@@ -44,7 +42,13 @@ class SettingsController: UIViewController {
         }
     }
     
+    @IBAction func dismiss() {
+        delegate.color(color: (color))
+        dismiss (animated: true, completion: nil)
+    }
+    
     private func setColor() {
+        color = Color(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
@@ -53,17 +57,13 @@ class SettingsController: UIViewController {
         )
     }
     
-    private func setValue(for labels: UILabel...) {
-        labels.forEach { label in
-            switch label {
-            case redLabel:
-                redLabel.text = string(from: redSlider)
-            case greenLabel:
-                greenLabel.text = string(from: greenSlider)
-            default:
-                blueLabel.text = string(from: blueSlider)
-            }
-        }
+    private func setValue() {
+        redSlider.value = color.red
+        redLabel.text = string(from: redSlider)
+        greenSlider.value = color.green
+        greenLabel.text = string(from: greenSlider)
+        blueSlider.value = color.blue
+        blueLabel.text = string(from: blueSlider)
     }
     
     private func string(from slider: UISlider) -> String {

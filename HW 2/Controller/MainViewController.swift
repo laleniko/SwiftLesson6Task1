@@ -1,30 +1,45 @@
 //
 //  MainViewController.swift
-//  HW 2
 //
 //  Created by Николай Ларьков on 03.09.2021.
-//  Copyright © 2021 Alexey Efimov. All rights reserved.
 //
 
 import UIKit
 
+protocol SettingViewControllerDelegate {
+    func color(color: Color)
+}
+
 class MainViewController: UIViewController {
+    private var color = Color.getDefaultColor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let settingsVC = segue.destination as? SettingsViewController else { return }
+        settingsVC.color = color
+        settingsVC.delegate = self
     }
-    */
+    
+    private func setColor() {
+        print(color)
+        view.backgroundColor = UIColor(
+            red: CGFloat(color.red),
+            green: CGFloat(color.green),
+            blue: CGFloat(color.blue),
+            alpha: 1
+        )
+    }
 
+
+}
+
+extension MainViewController: SettingViewControllerDelegate {
+    func color(color: Color) {
+        self.color = color
+        setColor()
+    }
 }

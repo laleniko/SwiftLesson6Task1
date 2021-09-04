@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		95FA908C26E28DCD0048CA2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FA908B26E28DCD0048CA2C /* MainViewController.swift */; };
+		95FA908E26E28F600048CA2C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FA908D26E28F600048CA2C /* Color.swift */; };
 		A86938C720D027C300E87976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86938C620D027C300E87976 /* AppDelegate.swift */; };
-		A86938C920D027C300E87976 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86938C820D027C300E87976 /* SettingsController.swift */; };
+		A86938C920D027C300E87976 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86938C820D027C300E87976 /* SettingsViewController.swift */; };
 		A86938CC20D027C300E87976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86938CA20D027C300E87976 /* Main.storyboard */; };
 		A86938CE20D027C400E87976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86938CD20D027C400E87976 /* Assets.xcassets */; };
 		A86938D120D027C400E87976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86938CF20D027C400E87976 /* LaunchScreen.storyboard */; };
@@ -17,9 +18,10 @@
 
 /* Begin PBXFileReference section */
 		95FA908B26E28DCD0048CA2C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		95FA908D26E28F600048CA2C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A86938C320D027C300E87976 /* HW 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86938C620D027C300E87976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A86938C820D027C300E87976 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		A86938C820D027C300E87976 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A86938CB20D027C300E87976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A86938CD20D027C400E87976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A86938D020D027C400E87976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		95FA908826E286990048CA2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				95FA908D26E28F600048CA2C /* Color.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -56,7 +59,7 @@
 		95FA908A26E286C70048CA2C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A86938C820D027C300E87976 /* SettingsController.swift */,
+				A86938C820D027C300E87976 /* SettingsViewController.swift */,
 				95FA908B26E28DCD0048CA2C /* MainViewController.swift */,
 			);
 			path = Controller;
@@ -164,7 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95FA908C26E28DCD0048CA2C /* MainViewController.swift in Sources */,
-				A86938C920D027C300E87976 /* SettingsController.swift in Sources */,
+				95FA908E26E28F600048CA2C /* Color.swift in Sources */,
+				A86938C920D027C300E87976 /* SettingsViewController.swift in Sources */,
 				A86938C720D027C300E87976 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -298,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -318,7 +322,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.swiftbook.HW-2";
+				PRODUCT_BUNDLE_IDENTIFIER = Lesson6Task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,7 +340,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.swiftbook.HW-2";
+				PRODUCT_BUNDLE_IDENTIFIER = Lesson6Task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

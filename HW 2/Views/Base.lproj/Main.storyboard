@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="2M1-D2-aCr">
             <objects>
-                <viewController id="gw7-I5-cBq" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="gw7-I5-cBq" customClass="MainViewController" customModule="HW_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MrP-ib-naf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="280.80000000000001" y="129.98500749625188"/>
         </scene>
-        <!--Settings Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SettingsController" customModule="HW_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="HW_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,12 +125,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYp-01-qWf">
+                                <rect key="frame" x="161" y="477" width="53" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss" destination="BYZ-38-t0r" eventType="touchUpInside" id="KzC-2s-mj4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14211790186667489" green="0.29647090467996817" blue="0.5760962034239987" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="IbL-qV-7Kr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Sl-ax-kew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mYp-01-qWf" secondAttribute="bottom" constant="150" id="I7k-eW-8WU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbL-qV-7Kr" secondAttribute="trailing" constant="16" id="MP6-Ew-gbh"/>
+                            <constraint firstItem="mYp-01-qWf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NkY-Nc-RHX"/>
                             <constraint firstItem="LAC-qd-7r8" firstAttribute="top" secondItem="IbL-qV-7Kr" secondAttribute="bottom" constant="53" id="f7g-rF-YuP"/>
                             <constraint firstItem="LAC-qd-7r8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kRe-t4-j9O"/>
                             <constraint firstAttribute="trailing" secondItem="LAC-qd-7r8" secondAttribute="trailing" constant="16" id="kq6-Ie-FAn"/>
@@ -172,6 +184,9 @@
     </scenes>
     <resources>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
