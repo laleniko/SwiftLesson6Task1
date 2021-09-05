@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
     }
     
     private func setColor() {
-        print(color)
         view.backgroundColor = UIColor(
             red: CGFloat(color.red),
             green: CGFloat(color.green),
